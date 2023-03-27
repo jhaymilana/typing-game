@@ -36,7 +36,7 @@ const words = ['dinosaur', 'love', 'pineapple', 'calendar', 'robot', 'building',
 
 let randomWord;
 let score = 0;
-let time = 10;
+let time = 100;
 
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
