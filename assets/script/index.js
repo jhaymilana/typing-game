@@ -41,7 +41,6 @@ let randomWord;
 let score = 0;
 let time = 120;
 text.focus();
-const timeInterval = setInterval(updateTime, 1000);
 
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
@@ -60,6 +59,8 @@ function updateScore() {
 addWordToDom();
 
 function updateTime() {
+  const timeInterval = setInterval(updateTime, 1000);
+
   time--;
   timeEl.innerHTML = time + "s";
   if (time === 0) {
@@ -84,10 +85,10 @@ text.addEventListener("input", (e) => {
     addWordToDom();
     e.target.value = "";
     updateScore();
-    updateTime();
   }
 });
 
 start.addEventListener('click', function() {
     backgroundSound.play();
+    updateTime();
 });
