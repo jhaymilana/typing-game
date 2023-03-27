@@ -59,8 +59,6 @@ function updateScore() {
 addWordToDom();
 
 function updateTime() {
-  const timeInterval = setInterval(updateTime, 1000);
-
   time--;
   timeEl.innerHTML = time + "s";
   if (time === 0) {
@@ -68,6 +66,8 @@ function updateTime() {
     gameOver();
   }
 }
+
+const timeInterval = setInterval(updateTime, 1000);
 
 function gameOver() {
   endgameEl.innerHTML = `
@@ -84,11 +84,12 @@ text.addEventListener("input", (e) => {
   if (insertedText === randomWord) {
     addWordToDom();
     e.target.value = "";
-    updateScore();
+    updateScore();  
   }
 });
 
 start.addEventListener('click', function() {
-    backgroundSound.play();
-    updateTime();
+  backgroundSound.play();
+  updateTime();
+  start.classList.add('hidden');
 });

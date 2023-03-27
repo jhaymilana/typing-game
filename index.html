@@ -19,27 +19,29 @@
   <script src="./assets/script/index.js" defer></script>
   </head>
   <body>
-    <main>
-      <div class="container">
-        <h1 class="title center">Speed Typer</h2>
-          <div class="info center">
-            <p class="time-container">Time left: <span id="time">120s</span></p>
-            <p class="score-container">Score: <span id="score">0</span></p>
+    <main class="center">
+      <div class="border">
+        <div class="container">
+          <h1 class="title center">Speed Typer</h2>
+            <div class="info center">
+              <p class="time-container">Time left: <span id="time">120s</span></p>
+              <p class="score-container">Score: <span id="score">0</span></p>
+            </div>
+          <h2 class="center">Type the following: </h2>
+          <h1 id="word" class=" word center"></h1>
+          <div class="input center">
+            <input
+            type="text"
+            id="text"
+            autocomplete="off"
+            placeholder="Type the word here..."
+          />
           </div>
-        <h2 class="center">Type the following: </h2>
-        <h1 id="word" class=" word center"></h1>
-        <div class="input center">
-          <input
-          type="text"
-          id="text"
-          autocomplete="off"
-          placeholder="Type the word here..."
-        />
+          <div id="start" class="start">
+            <button>Start</button>
+          </div>
+          <div id="end-game-container" class="end-game-container center"></div>
         </div>
-        <div id="start" class="start">
-          <button>Start</button>
-        </div>
-        <div id="end-game-container" class="end-game-container center"></div>
       </div>
     </main>
   </body>
