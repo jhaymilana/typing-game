@@ -80,5 +80,7 @@ text.addEventListener("input", (e) => {
     addWordToDom();
     e.target.value = "";
     updateScore();
+    time += 5;
+    updateTime();
   }
 });
