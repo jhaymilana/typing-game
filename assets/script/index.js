@@ -39,7 +39,9 @@ const words = ['dinosaur', 'love', 'pineapple', 'calendar', 'robot', 'building',
 
 let randomWord;
 let score = 0;
-let time = 100;
+let time = 120;
+text.focus();
+const timeInterval = setInterval(updateTime, 1000);
 
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
@@ -66,6 +68,14 @@ function updateTime() {
   }
 }
 
+function gameOver() {
+  endgameEl.innerHTML = `
+    <h2>Time ran out!</h2>
+    <p>Your final score is ${score}</p>
+    <button onClick="location.reload()">Reload</button>
+  `;
+}
+
 addWordToDom();
 
 text.addEventListener("input", (e) => {
@@ -74,11 +84,10 @@ text.addEventListener("input", (e) => {
     addWordToDom();
     e.target.value = "";
     updateScore();
-    time += 5;
     updateTime();
   }
 });
 
 start.addEventListener('click', function() {
-  backgroundSound.play();
+    backgroundSound.play();
 });
