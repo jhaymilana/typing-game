@@ -27,6 +27,7 @@ body {
   --app-background-info: #2a2f4e;
   --app-secondary: #0f111c;
   --app-start: #23c373;
+  --app-start-hover: #1b985a;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -37,7 +38,7 @@ body {
   color: var(--app-white);
   font-size: 50px;
   letter-spacing: 0.4px;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 h2 {
@@ -71,4 +72,23 @@ input[type=text] {
 .header {
   color: var(--app-white);
   display: grid;
+}
+
+.start {
+  display: grid;
+  place-items: center;
+  margin-top: 15px;
+}
+
+button {
+  background-color: var(--app-start);
+  color: var(--app-white);
+  width: 70px;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--app-start-hover);
 }

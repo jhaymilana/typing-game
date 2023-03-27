@@ -18,6 +18,9 @@ const settingsBtn = document.getElementById("settings-btn");
 const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
+const start = document.getElementById("start");
+const backgroundSound = new Audio('./assets/audio/background.mp3');
+backgroundSound.type = 'audio/mp3';
 
 const words = ['dinosaur', 'love', 'pineapple', 'calendar', 'robot', 'building', 
   'population', 'weather', 'bottle', 'history', 'dream', 'character', 'money', 
@@ -63,15 +66,6 @@ function updateTime() {
   }
 }
 
-function gameOver() {
-  endgameEl.innerHTML = `
-    <h1>Time ran out</h1>
-    <p>Your final score is ${score}</p>
-    <button onClick="location.reload()">Reload</button>
-  `;
-  endgameEl.style.display = "flex";
-}
-
 addWordToDom();
 
 text.addEventListener("input", (e) => {
@@ -83,4 +77,8 @@ text.addEventListener("input", (e) => {
     time += 5;
     updateTime();
   }
+});
+
+start.addEventListener('click', function() {
+  backgroundSound.play();
 });
