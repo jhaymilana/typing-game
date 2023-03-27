@@ -1,0 +1,74 @@
+@import url('./reset.css');
+
+body {
+  background-color: var(--app-background);
+}
+
+.container {
+  margin-inline: auto;
+  width: min(100% - 30px, 1080px);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Variables
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+:root {
+  --app-background: #181b2d;
+  --app-white: #fff;
+  --app-black: #000;
+  --app-blue: #3c57ff;
+  --app-blue-hover: #364ee6;
+  --app-background-info: #2a2f4e;
+  --app-secondary: #0f111c;
+  --app-start: #23c373;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Main
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.title {
+  color: var(--app-white);
+  font-size: 50px;
+  letter-spacing: 0.4px;
+  padding-top: 50px;
+}
+
+h2 {
+  color: var(--app-white);
+  margin-top: 15px;
+}
+
+.word {
+  color: var(--app-white);
+  margin-top: 15px;
+}
+
+input[type=text] {
+  background-color: var(--app-background-info);
+  color: var(--app-white);
+  margin-top: 15px;
+  width: 300px;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.info {
+  color: var(--app-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.header {
+  color: var(--app-white);
+  display: grid;
+}
