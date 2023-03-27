@@ -1,7 +1,7 @@
 @import url('./reset.css');
 
 body {
-  background-color: var(--app-background);
+  background-image: url(../image/background.jpg);
 }
 
 .container {
