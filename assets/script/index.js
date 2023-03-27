@@ -54,6 +54,26 @@ function updateScore() {
 
 addWordToDom();
 
+function updateTime() {
+  time--;
+  timeEl.innerHTML = time + "s";
+  if (time === 0) {
+    clearInterval(timeInterval);
+    gameOver();
+  }
+}
+
+function gameOver() {
+  endgameEl.innerHTML = `
+    <h1>Time ran out</h1>
+    <p>Your final score is ${score}</p>
+    <button onClick="location.reload()">Reload</button>
+  `;
+  endgameEl.style.display = "flex";
+}
+
+addWordToDom();
+
 text.addEventListener("input", (e) => {
   const insertedText = e.target.value;
   if (insertedText === randomWord) {
